@@ -22,7 +22,6 @@ clean clear:
 	rm -rf $(BUILDDIR)
 
 p4est/.dummy:
-	git submodule update --init --recursive
 	cd p4est && ./bootstrap
 	cd p4est && ./configure --enable-mpi --enable-debug --prefix="$(P4EST_PREFIX)"
 	cd p4est && make -j4
