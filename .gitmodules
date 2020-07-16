@@ -1,3 +1,8 @@
 [submodule "sites/gcc/p4est"]
 	path = sites/gcc/p4est
 	url = https://github.com/cburstedde/p4est
+    ignore = dirty
+[submodule "sites/intel/p4est"]
+	path = sites/intel/p4est
+	url = https://github.com/cburstedde/p4est
+    ignore = dirty

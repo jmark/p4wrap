@@ -1,5 +1,4 @@
 bin
-*p4est*
 build
 *.a
 *.so
