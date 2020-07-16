@@ -1,0 +1,8 @@
+bin
+*p4est*
+build
+*.a
+*.so
+*.o
+*.mod
+*.smod
