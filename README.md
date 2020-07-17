@@ -12,17 +12,17 @@ Author: Johannes Markert <johannes.markert@jmark.de>
 
 ## Compilation
 ```bash
-    # fetch 'p4est'
-    git submodule update --init --recursive
+# fetch 'p4est'
+git submodule update --init --recursive
 
-    # run make (adapt Makefile to your system)
-    make -C sites/[gcc|intel]
+# run make (adapt Makefile to your system)
+make -C sites/[gcc|intel]
 
-    # copy static library into your project
-    cp sites/[gcc|intel]/build/libp4wrap.a path/to/your/project/build/...
+# copy static library into your project
+cp sites/[gcc|intel]/build/libp4wrap.a path/to/your/project/build/...
 
-    # copy Fortran wrappers into your project
-    cp wrapper/*.f90 path/to/your/project/source/...
+# copy Fortran wrappers into your project
+cp wrapper/*.f90 path/to/your/project/source/...
 ```
 
 Have fun!
