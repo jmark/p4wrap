@@ -155,8 +155,18 @@ size_t p4wrap_get_idx_global(p4est_t* p4est)
 void
 p4wrap_gather_proc_offsets(const p4est_ghost_t *layer, const int len, size_t *proc_offsets)
 {    
+    // Use memcopy in the future.
     for (size_t i = 0; i < len; i++) {
         proc_offsets[i] = layer->proc_offsets[i];
+    }
+}
+
+void
+p4wrap_gather_mirror_proc_offsets(const p4est_ghost_t *layer, const int len, size_t *mirror_proc_offsets)
+{    
+    // Use memcopy in the future.
+    for (size_t i = 0; i < len; i++) {
+        mirror_proc_offsets[i] = layer->mirror_proc_offsets[i];
     }
 }
 

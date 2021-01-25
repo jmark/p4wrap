@@ -71,6 +71,19 @@ end interface
 
 interface
 # if defined(P4_TO_P8)
+    subroutine p8wrap_gather_mirror_proc_offsets(layer,len,proc_offsets) bind(c,name="p8wrap_gather_mirror_proc_offsets")
+# else
+    subroutine p4wrap_gather_mirror_proc_offsets(layer,len,proc_offsets) bind(c,name="p4wrap_gather_mirror_proc_offsets")
+# endif
+        use iso_c_binding, only: c_ptr, c_int
+
+        type(c_ptr), value, intent(in) :: layer,proc_offsets
+        integer(c_int), value, intent(in) :: len
+    end subroutine
+end interface
+
+interface
+# if defined(P4_TO_P8)
     subroutine p8wrap_gather_mirroridx(layer,mirroridx) bind(c,name="p8wrap_gather_mirroridx")
 # else
     subroutine p4wrap_gather_mirroridx(layer,mirroridx) bind(c,name="p4wrap_gather_mirroridx")
