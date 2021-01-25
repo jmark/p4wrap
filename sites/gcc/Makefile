@@ -34,7 +34,7 @@ clean clear:
 
 p4est/.dummy:
 	cd p4est && ./bootstrap
-	cd p4est && ./configure --enable-mpi --enable-debug --prefix="$(P4EST_PREFIX)"
+	cd p4est && ./configure --enable-mpi --prefix="$(P4EST_PREFIX)"
 	cd p4est && make -j4
 	cd p4est && make install
 	touch $@
