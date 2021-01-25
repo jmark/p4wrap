@@ -171,6 +171,15 @@ p4wrap_gather_mirror_proc_offsets(const p4est_ghost_t *layer, const int len, siz
 }
 
 void
+p4wrap_gather_mirror_proc_mirrors(const p4est_ghost_t *layer, const int len, size_t *mirror_proc_mirrors)
+{    
+    // Use memcopy in the future.
+    for (size_t i = 0; i < len; i++) {
+        mirror_proc_mirrors[i] = layer->mirror_proc_mirrors[i];
+    }
+}
+
+void
 p4wrap_gather_mirroridx(p4est_ghost_t *layer, size_t *mirroridx)
 {    
     for (size_t q = 0; q < layer->mirrors.elem_count; q++) {
