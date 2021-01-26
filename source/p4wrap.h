@@ -17,6 +17,8 @@
 # define p4wrap_side_t p8wrap_side_t
 
 # define p4wrap_gather_proc_offsets p8wrap_gather_proc_offsets
+# define p4wrap_gather_mirror_proc_offsets p8wrap_gather_mirror_proc_offsets
+# define p4wrap_gather_mirror_proc_mirrors p8wrap_gather_mirror_proc_mirrors
 
 # define p4wrap_quadrant_child_id p8wrap_quadrant_child_id
 
