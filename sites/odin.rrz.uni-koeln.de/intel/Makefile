@@ -17,6 +17,7 @@ default: staticlib
 clean clear:
 	rm -rf $(BUILDDIR)
 
+staticlib: $(BUILDDIR)/libp4wrap.a
 wrappers: $(BUILDDIR)/p4wrap.o $(BUILDDIR)/p8wrap.o
 
 $(BUILDDIR)/p4wrap.o: $(SOURCEDIR)/p4wrap.c $(SOURCEDIR)/p4wrap.h
@@ -27,7 +28,5 @@ $(BUILDDIR)/p8wrap.o: $(SOURCEDIR)/p8wrap.c $(SOURCEDIR)/p4wrap.h
 	mkdir -p build
 	$(CC) $(CCFLAGS) -c -o $@ $<
 
-staticlib: $(BUILDDIR)/libp4wrap.a
-
 $(BUILDDIR)/libp4wrap.a: wrappers
-	ar rcs $(shell find build -type f -iname '*.o')
+	ar rcs $@ $(shell find build -type f -iname '*.o')
