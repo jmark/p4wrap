@@ -1,4 +1,4 @@
-SOURCEDIR = ../../source
+SOURCEDIR = ../../../source
 BUILDDIR = build
 
 P4EST_PREFIX="$(shell pwd)/p4est/_prefix_"

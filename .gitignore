@@ -2,6 +2,7 @@ bin
 build
 *.a
 *.so
+*.lo
 *.o
 *.mod
 *.smod
